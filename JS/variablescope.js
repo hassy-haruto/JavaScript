@@ -1,4 +1,5 @@
-//　osascript -l JavaScript sample.js
+// chmod 755 variablescope.js
+//　osascript -l JavaScript variablescope.js
 
 const testScope = (scope) => {
   if (scope === 'function') {
