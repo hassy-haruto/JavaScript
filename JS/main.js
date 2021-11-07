@@ -10,10 +10,11 @@
     el: '#app',
     data: {
       newItem: '',
-      todos: [{
-        title: 'task1',
-        isDone: false
-      }]
+      // todos: [{
+      //   title: 'task1',
+      //   isDone: false
+      // }]
+      todos: []
     },
     methods: {  
 addItem: function() {
