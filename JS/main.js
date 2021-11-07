@@ -10,21 +10,19 @@
     el: '#app',
     data: {
       newItem: '',
-      todos: [
-        'task 1',
-        'task 2',
-        'task 3'
-      ]
+      todos: [{
+        title: 'task1',
+        isDone: false
+      }]
     },
-    methods: {
-//       addItem: function(e)
-//  {
-//    e.preventDefault();
-//    this.todos.push(this.newItem);
-//  }    
+    methods: {  
 addItem: function() {
-  this.todos.push(this.newItem);
-  this.newItem = '';
+    var item = {
+      title:this.newItem,
+      isDone: false
+    };
+    this.todos.push(item);
+    this.newItem = '';
 },
 deleteItem: function(index)
 {
