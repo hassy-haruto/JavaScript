@@ -8,12 +8,15 @@
 <body>
 
   <div id="app">
-    <like-component message="like"></like-component>
-    <like-component message="Awesome"></like-component>
-    <like-component message="Great"></like-component>
-    <like-component></like-component>
+    <p>Total likes: {{ total }} </p>
+    <like-component message="like" @increment="incrementTotal"></like-component>
+    <like-component message="Awesome" @increment="incrementTotal"></like-component>
+    <like-component message="Great" @increment="incrementTotal"></like-component>
+    <like-component @increment="incrementTotal"></like-component>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
+
+<!-- UIを部品化して相互に通信することがconponentだと可能なので、大規模アプリに適している -->
